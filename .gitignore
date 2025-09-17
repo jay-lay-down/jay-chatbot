@@ -1,0 +1,21 @@
+# 데이터/개인정보 가능 파일
+*.jsonl
+*.xlsx
+
+# 체크포인트/대용량
+checkpoints/
+results_*/
+**/pytorch_model.bin
+**/*.safetensors
+**/trainer_state.json
+**/training_args.bin
+
+# 파이썬/노트북 캐시
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS/에디터
+.DS_Store
+Thumbs.db
+.vscode/
