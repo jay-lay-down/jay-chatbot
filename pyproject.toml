@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jaychat"
+version = "0.1.0"
+description = "KakaoTalk preprocessing + Two-stage QLoRA finetuning + inference"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Jay" }]
+dependencies = [
+  "tqdm",
+  "pandas",
+  "openpyxl",
+  "datasets",
+  "transformers",
+  "peft",
+  "bitsandbytes",
+  "accelerate",
+  "trl",
+  "numpy",
+  "torch"  # 환경에 맞게 별도 설치가 나을 수 있음 (Colab은 미리 깔림)
+]
+
+[project.scripts]
+jaychat = "jaychat.cli:main"
