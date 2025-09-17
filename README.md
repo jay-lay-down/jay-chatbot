@@ -36,7 +36,7 @@ jaychat chat --model-dir checkpoints/my-solar-chatbot-final
 ```
 
 ## 참고
-GPU 필요 (Colab T4/A100 권장)\
+GPU 필요 (Colab T4/A100 권장)
 
 # 실제 채팅 예시
 ![Chat Example 1](./assets/chat_example1.png)
