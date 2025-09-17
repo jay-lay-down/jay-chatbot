@@ -17,8 +17,6 @@
 
 # 테스트 
 
-## 설치 방법
-
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
@@ -35,6 +33,7 @@ jaychat infer --model-dir checkpoints/my-solar-chatbot-final --prompt "오늘 �
 
 ## 테스트 시작
 jaychat chat --model-dir checkpoints/my-solar-chatbot-final
+```
 
 ## 참고
 GPU 필요 (Colab T4/A100 권장)\
