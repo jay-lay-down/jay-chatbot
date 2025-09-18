@@ -29,7 +29,7 @@ model_id = "jay1121/solar-chatbot-final"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto")
 
-inputs = tokenizer("Hello! How are you?", return_tensors="pt")
+inputs = tokenizer("안녕?", return_tensors="pt")
 outputs = model.generate(**inputs, max_new_tokens=50)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
