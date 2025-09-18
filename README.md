@@ -16,23 +16,23 @@
 ✅ 미세조정: 자주 사용하는 단어는 화이트리스트/자주 사용하지 않는 어색한 단어는 블랙리스트 구현 후, 몇 가지 일상적 질문에 대한 예시 답변 제시
 
 # 테스트 
+This is a fine-tuned SOLAR model for conversational AI tasks.
+
+✅ 모델 테스트(Python에서 실행)\
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-pip install -e .
+pip install transformers accelerate
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-## 전처리
-jaychat preprocess --chats_dir ./kakao_txt --my_name "사용자 이름 넣기" --out kakaotalk.jsonl --confirm
+model_id = "jay1121/solar-chatbot-final"
 
-## 학습(QLoRA)
-jaychat train --excel my_dataset.xlsx --kakao kakaotalk.jsonl --merge
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto")
 
-## 추론(merged)
-jaychat infer --model-dir checkpoints/my-solar-chatbot-final --prompt "오늘 뭐 해?"
+inputs = tokenizer("Hello! How are you?", return_tensors="pt")
+outputs = model.generate(**inputs, max_new_tokens=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
-## 테스트 시작
-jaychat chat --model-dir checkpoints/my-solar-chatbot-final
 ```
 
 ## 참고
