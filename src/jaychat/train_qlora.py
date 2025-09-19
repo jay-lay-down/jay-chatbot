@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
 # -*- coding: utf-8 -*-
 """
 - GitHub에는 이 wrapper만 공개
