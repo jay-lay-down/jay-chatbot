@@ -42,3 +42,16 @@ GPU 필요 (Colab T4/A100 권장)
 ![Chat Example 1](./assets/image.png)
 ![Chat Example 2](./assets/image (1).png)
 
+## Content License
+
+- **Code** is licensed under **Apache-2.0**.
+- **Documentation, examples, and other non-code content** are licensed under **CC BY-NC-ND 4.0**.
+
+You may change the content license to **CC BY 4.0** if you want to allow commercial use and derivatives with attribution.
+
+## No-impersonation & Branding
+
+This project is not affiliated with or endorsed by any person or organization.
+You may not use my name, likeness, voice, or distinctive writing style to imply endorsement or to build systems that impersonate me without explicit permission.
+
+
